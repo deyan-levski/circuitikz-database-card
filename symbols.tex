@@ -1,0 +1,517 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TikZ electrical symbol reference card %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Creates figures including all electrical symbols provided by circuitikz v.0.3 
+%
+% Deyan Levski, deyan.levski@gmail.com, 17.01.2016
+%
+
+\documentclass[11pt,a4paper]{report}
+\usepackage[margin=0.2in]{geometry}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\begin{document}
+
+
+\begin{figure}
+  \begin{center}
+  
+\Huge{\begin{verbatim}              circuitikz v.0.3
+       electrical symbol database card\end{verbatim}}
+
+\vspace{0.5cm}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ nmos ] {};
+    \draw (4,0) node[ pmos ] {};
+    \draw (10,0) to[ resistor ] (8,0);
+    \draw (14,0) to[ inductor ] (12,0);
+
+    \ctikzset{tripoles/mos style/arrows}
+    \draw (2,0) node[ nmos ] {};
+    \draw (6,0) node[ pmos ] {};
+    
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+\end{circuitikz}
+      
+\begin{circuitikz} 
+    \draw (0,0) node[ ground ] {};
+    \draw (4,0) node[ rground ] {};
+    \draw (8,0) node[ nground ] {};
+    \draw (12,0) node[ pground ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ cground ] {};
+    \draw (4,0) node[ antenna ] {};
+    \draw (8,0) node[ rxantenna ] {};
+    \draw (12,0) node[ txantenna ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ capacitor ] (2,0);
+    \draw (4,0) to[ ammeter ] (6,0);
+    \draw (8,0) to[ voltmeter ] (10,0);
+    \draw (12,0) to[ lamp ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ generic ] (2,0);
+    \draw (4,0) to[ tgeneric ] (6,0);
+    \draw (8,0) to[ ageneric ] (10,0);
+    \draw (12,0) to[ fullgeneric ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ tfullgeneric ] (2,0);
+    \draw (4,0) to[ memristor ] (6,0);
+    \draw (8,0) to[ R ] (10,0);
+    \draw (12,0) to[ vR ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ pR ] (2,0);
+    \draw (4,0) to[ european resistor ] (6,0);
+    \draw (8,0) to[ variable european resistor ] (10,0);
+    \draw (12,0) to[ european potentiometer ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ varistor ] (2,0);
+    \draw (4,0) to[ photoresistor ] (6,0);
+    \draw (8,0) to[ thermocouple ] (10,0);
+    \draw (12,0) to[ thermistor ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ thermistor ptc ] (2,0);
+    \draw (4,0) to[ thermistor ntc ] (6,0);
+    \draw (8,0) to[ fuse ] (10,0);
+    \draw (12,0) to[ afuse ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ battery ] (2,0);
+    \draw (4,0) to[ battery1 ] (6,0);
+    \draw (8,0) to[ european voltage source ] (10,0);
+    \draw (12,0) to[ american voltage source ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ european current source ] (2,0);
+    \draw (4,0) to[ american current source ] (6,0);
+    \draw (8,0) to[ diode ] (10,0);
+    \draw (12,0) to[ sDo ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ zDo ] (2,0);
+    \draw (4,0) to[ tDo ] (6,0);
+    \draw (8,0) to[ pDo ] (10,0);
+    \draw (12,0) to[ leDo ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ VCo ] (2,0);
+    \draw (4,0) to[ full diode ] (6,0);
+    \draw (8,0) to[ sD* ] (10,0);
+    \draw (12,0) to[ zD* ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ tD* ] (2,0);
+    \draw (4,0) to[ pD* ] (6,0);
+    \draw (8,0) to[ leD* ] (10,0);
+    \draw (12,0) to[ VC* ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ squid ] (2,0);
+    \draw (4,0) to[ barrier ] (6,0);
+    \draw (8,0) to[ pC ] (10,0);
+    \draw (12,0) to[ vC ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ cute inductor ] (2,0);
+    \draw (4,0) to[ variable cute inductor ] (6,0);
+    \draw (8,0) to[ american inductor ] (10,0);
+    \draw (12,0) to[ variable american inductor ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ european inductor ] (2,0);
+    \draw (4,0) to[ variable european inductor ] (6,0);
+    \draw (8,0) to[ tline ] (10,0);
+    \draw (12,0) to[ sV ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ sI ] (2,0);
+    \draw (4,0) to[ sqV ] (6,0);
+    \draw (8,0) to[ vsourcetri ] (10,0);
+    \draw (12,0) to[ esource ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ dcvsource ] (2,0);
+    \draw (4,0) to[ dcisource ] (6,0);
+    \draw (8,0) to[ switch ] (10,0);
+    \draw (12,0) to[ closing switch ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ opening switch ] (2,0);
+    \draw (4,0) to[ push button ] (6,0);
+    \draw (8,0) to[ twoport ] (10,0);
+    \draw (12,0) to[ vco ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ bandpass ] (2,0);
+    \draw (4,0) to[ highpass ] (6,0);
+    \draw (8,0) to[ lowpass ] (10,0);
+    \draw (12,0) to[ adc ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ dac ] (2,0);
+    \draw (4,0) to[ dsp ] (6,0);
+    \draw (8,0) to[ fft ] (10,0);
+    \draw (12,0) to[ amp ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ vamp ] (2,0);
+    \draw (4,0) to[ piattenuator ] (6,0);
+    \draw (8,0) to[ vpiattenuator ] (10,0);
+    \draw (12,0) to[ tattenuator ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+  \end{center}
+\end{figure}
+
+
+\begin{figure}
+  \begin{center}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ vtattenuator ] (2,0);
+    \draw (4,0) to[ phaseshifter ] (6,0);
+    \draw (8,0) to[ vphaseshifter ] (10,0);
+    \draw (12,0) to[ detector ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ european controlled voltage source ] (2,0);
+    \draw (4,0) to[ american controlled voltage source ] (6,0);
+    \draw (8,0) to[ european controlled current source ] (10,0);
+    \draw (12,0) to[ american controlled current source ] (14,0);
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) to[ csV ] (2,0);
+    \draw (4,0) to[ csI ] (6,0);
+    \draw (8,0) node[ npn ] {};
+    \draw (12,0) node[ pnp ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ nigbt ] {};
+    \draw (4,0) node[ pigbt ] {};
+    \ctikzset{tripoles/mos style/arrows}
+    \draw (8,0) node[ nmos ] {};
+    \draw (12,0) node[ pmos ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ nfet ] {};
+    \draw (4,0) node[ nigfete ] {};
+    \draw (8,0) node[ nigfetebulk ] {};
+    \draw (12,0) node[ nigfetd ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ pfet ] {};
+    \draw (4,0) node[ pigfete ] {};
+    \draw (8,0) node[ pigfetebulk ] {};
+    \draw (12,0) node[ pigfetd ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ njfet ] {};
+    \draw (4,0) node[ pjfet ] {};
+    \draw (8,0) node[ isfet ] {};
+    \draw (12,0) node[ circulator ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ wilkinson ] {};
+    \draw (4,0) node[ spdt ] {};
+    \draw (8,0) node[ toggle switch ] {};
+    \draw (12,0) node[ triac ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ thyristor ] {};
+    \draw (4,0) node[ mixer ] {};
+    \draw (8,0) node[ transformer ] {};
+    \draw (12,0) node[ transformer core ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+  \end{center}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ gyrator ] {};
+    \draw (4,0) node[ coupler ] {};
+    \draw (8,0) node[ coupler2 ] {};
+    \draw (12,0) node[ american and port ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+
+\begin{circuitikz} 
+    \draw (0,0) node[ american or port ] {};
+    \draw (4,0) node[ american not port ] {};
+    \draw (8,0) node[ american nand port ] {};
+    \draw (12,0) node[ american nor port ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ american xor port ] {};
+    \draw (4,0) node[ american xnor port ] {};
+    \draw (8,0) node[ european and port ] {};
+    \draw (12,0) node[ european or port ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ european not port ] {};
+    \draw (4,0) node[ european nand port ] {};
+    \draw (8,0) node[ european nor port ] {};
+    \draw (12,0) node[ european xor port ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ european xnor port ] {};
+    \draw (4,0) node[ op amp ] {};
+    \draw (8,0) node[ fd op amp ] {};
+    \draw (12,0) node[ gm amp ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ plain amp ] {};
+    \draw (4,0) node[ buffer ] {};
+    \draw (8,0) node[ currarrow ] {};
+    \draw (12,0) node[ circ ] {};
+
+    \node [align=center] at (1,-1) {};
+    \node [align=center] at (5,-1) {};
+    \node [align=center] at (9,-1) {};
+    \node [align=center] at (13,-1) {};
+\end{circuitikz}
+
+\begin{circuitikz} 
+    \draw (0,0) node[ ocirc ] {};
+
+    \node [align=center] at (1,-1) {};
+\end{circuitikz}
+
+  \end{center}
+\end{figure}
+
+\end{document}
